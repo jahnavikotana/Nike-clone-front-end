@@ -1,0 +1,120 @@
+/* Product grid for products.html */
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+    align-items: start;
+}
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #fff;
+    color: #222;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #111;
+}
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 2px;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+.nav-links a:hover {
+    color: #e2e2e2;
+}
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    background: linear-gradient(135deg, #111 60%, #fff 100%);
+    color: #fff;
+    text-align: center;
+    animation: fadeIn 1.5s;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.shop-btn {
+    margin-top: 1.5rem;
+    padding: 0.75rem 2rem;
+    background: #fff;
+    color: #111;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: background 0.3s, color 0.3s;
+}
+.shop-btn:hover {
+    background: #111;
+    color: #fff;
+}
+.carousel {
+    margin: 3rem auto;
+    max-width: 900px;
+    overflow: hidden;
+}
+.carousel-track {
+    display: flex;
+    gap: 2rem;
+    transition: transform 0.5s;
+}
+.carousel-item {
+    background: #f5f5f5;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    padding: 1rem;
+    text-align: center;
+    flex: 0 0 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.carousel-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+}
+.carousel-item img {
+    width: 300px;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    background: #fff;
+}
+@media (max-width: 900px) {
+    .carousel-track {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .carousel-item {
+        flex: 1 1 100%;
+    }
+}
+footer {
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
